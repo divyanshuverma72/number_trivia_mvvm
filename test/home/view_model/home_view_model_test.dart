@@ -34,7 +34,7 @@ void main() {
       await homeViewModel.getConcreteNumberTrivia(tNumber);
 
       //assert
-      expect(homeViewModel.loadingState, Error(message: tNumberTrivia.text));
+      expect(homeViewModel.loadingState, Completed(data: tNumberTrivia.text));
       verify(() => mockHomeRepository.getConcreteNumberTrivia(any()));
       verifyNoMoreInteractions(mockHomeRepository);
     });

@@ -12,7 +12,7 @@ class HomeViewModel extends ChangeNotifier {
   String serverFailureMessage = 'Server Failure';
   String cacheFailureMessage = 'Cache Failure';
 
-  LoadingState loadingState = InitialState();
+  LoadingState loadingState = InitialState()
   
   Future<void> getConcreteNumberTrivia(int number) async {
     loadingState = InProgress();
